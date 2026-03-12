@@ -1794,7 +1794,7 @@ export default function MoneyWithMariah() {
                 href: "https://www.instagram.com/mariahakinbi/",
                 label: "Instagram",
               },
-              { icon: <YoutubeIcon />, href: "#", label: "YouTube" },
+              { icon: <YoutubeIcon />, href: "https://www.youtube.com/@mariahakinbi", label: "YouTube" },
             ].map((s, i) => (
               <a
                 key={i}
