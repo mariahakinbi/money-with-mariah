@@ -1506,7 +1506,7 @@ export default function MoneyWithMariah() {
                 "Values-based spending plan",
                 "Recording + action items",
               ],
-              cta: "Book a Session",
+              cta: "Get Your Roadmap",
               href: "https://calendly.com",
               active: true,
             },

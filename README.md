@@ -6,12 +6,12 @@ Personal finance coaching website and Coast FIRE resource hub.
 
 ## What's on the site
 
-- **Coast FIRE Calculator**: embedded from [coastfirecalc.io](https://coastfirecalc.io), calculates when you can stop contributing and let compound growth carry you to retirement
-- **The Bookshelf**: curated book recommendations organized by Foundations, Investing, and Retirement with Amazon and Walmart affiliate links
-- **Book Notes**: reading notes and takeaways for each book
-- **Coaching Services**: 1:1 Coast FIRE roadmap sessions, 3-month coaching packages, and group workshops
-- **Blog**: coming soon: posts on Coast FIRE, index fund investing, and building wealth on a single income
-- **Newsletter**: weekly insights on personal finance and financial independence
+- **Coast FIRE Calculator** — embedded from [coastfirecalc.io](https://coastfirecalc.io), calculates when you can stop contributing and let compound growth carry you to retirement
+- **The Bookshelf** — curated book recommendations organized by Foundations, Investing, and Retirement with Amazon and Walmart affiliate links
+- **Book Notes** — reading notes and takeaways for each book
+- **Coaching Services** — 1:1 Coast FIRE roadmap sessions, 3-month coaching packages, and group workshops
+- **Blog** — coming soon: posts on Coast FIRE, index fund investing, and building wealth on a single income
+- **Newsletter** — weekly insights on personal finance and financial independence
 
 ## Tech stack
 
