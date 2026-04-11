@@ -34,6 +34,7 @@ const ROUTING_CARDS = [
     href: "/coastfire",
     external: false,
     label: "PLAN YOUR PATH",
+    background: "#EDF2E8",
   },
   {
     icon: "\u{1F381}",
@@ -46,52 +47,144 @@ const ROUTING_CARDS = [
 ];
 
 const MILESTONES = [
-  { date: "2014", age: "age 21", title: "First Investment", body: "Made my first investment during a college internship. I had no idea what I was doing, but I started." },
-  { date: "2015", age: "", title: "Graduated College", body: "Graduated with a degree I knew I did not want to use full-time. I did not know much about investing, but I knew the more I put in early, the better for future-Mariah." },
-  { date: "2018", age: "", title: "First Full Time Job", body: "Started at $79K and immediately set up my 401k at $500 a month. Future me thanks past me." },
-  { date: "Jan 2021", age: "", title: "$105K Net Worth", body: "Hit 6-figure net worth, mainly from consistent contributions to my 401k and Roth IRA." },
-  { date: "Jun 2022", age: "", title: "$125K Net Worth", body: "Started maxing out my 401k contributions. Discovered Coast FIRE around this time, which changed how I thought about my entire financial plan." },
-  { date: "Jan 2023", age: "", title: "$274K Net Worth", body: "Kept contributing through the 2022 downturn. Buying when the market was down turned out to be one of the best things I did. Started AFC classes in December." },
-  { date: "Dec 2023", age: "", title: "$328K Net Worth", body: "Consistent contributions and compound growth doing the heavy lifting." },
-  { date: "Jul 2024", age: "", title: "$420K Net Worth", body: "Crossed $400K. The system just works when you leave it alone." },
-  { date: "Dec 2024", age: "", title: "$464K Net Worth", body: "Kept investing, kept giving, kept living. Another year of the system doing its thing." },
-  { date: "Dec 2025", age: "", title: "$566K Net Worth", body: "On track to retire at 48 on $5K/month. Work is becoming a choice, not a requirement." },
+  {
+    date: "2014",
+    age: "age 21",
+    title: "First Investment",
+    body: "Made my first investment during a college internship. I had no idea what I was doing, but I started.",
+  },
+  {
+    date: "2015",
+    age: "",
+    title: "Graduated College",
+    body: "Graduated with a degree I knew I did not want to use full-time. I did not know much about investing, but I knew the more I put in early, the better for future-Mariah.",
+  },
+  {
+    date: "2018",
+    age: "",
+    title: "First Full Time Job",
+    body: "Started at $79K and immediately set up my 401k at $500 a month. Future me thanks past me.",
+  },
+  {
+    date: "Jan 2021",
+    age: "",
+    title: "$105K Net Worth",
+    body: "Hit 6-figure net worth, mainly from consistent contributions to my 401k and Roth IRA.",
+  },
+  {
+    date: "Jun 2022",
+    age: "",
+    title: "$125K Net Worth",
+    body: "Started maxing out my 401k contributions. Discovered Coast FIRE around this time, which changed how I thought about my entire financial plan.",
+  },
+  {
+    date: "Jan 2023",
+    age: "",
+    title: "$274K Net Worth",
+    body: "Kept contributing through the 2022 downturn. Buying when the market was down turned out to be one of the best things I did. Started AFC classes in December.",
+  },
+  {
+    date: "Dec 2023",
+    age: "",
+    title: "$328K Net Worth",
+    body: "Consistent contributions and compound growth doing the heavy lifting.",
+  },
+  {
+    date: "Jul 2024",
+    age: "",
+    title: "$420K Net Worth",
+    body: "Crossed $400K. The system just works when you leave it alone.",
+  },
+  {
+    date: "Dec 2024",
+    age: "",
+    title: "$464K Net Worth",
+    body: "Kept investing, kept giving, kept living. Another year of the system doing its thing.",
+  },
+  {
+    date: "Dec 2025",
+    age: "",
+    title: "$566K Net Worth",
+    body: "On track to retire at 48 on $5K/month. Work is becoming a choice, not a requirement.",
+  },
 ];
 
 const QUESTIONS = [
   {
     q: "What does your ideal life look like five years from now?",
     options: [
-      { text: "Working a job I love with a real safety net", scores: { coast: 3, barista: 1 } },
-      { text: "Working part time on something flexible and meaningful", scores: { barista: 3, coast: 1 } },
-      { text: "Fully retired with a simple, low cost lifestyle", scores: { lean: 3 } },
-      { text: "Fully retired with travel, comfort, and zero compromises", scores: { fat: 3 } },
+      {
+        text: "Working a job I love with a real safety net",
+        scores: { coast: 3, barista: 1 },
+      },
+      {
+        text: "Working part time on something flexible and meaningful",
+        scores: { barista: 3, coast: 1 },
+      },
+      {
+        text: "Fully retired with a simple, low cost lifestyle",
+        scores: { lean: 3 },
+      },
+      {
+        text: "Fully retired with travel, comfort, and zero compromises",
+        scores: { fat: 3 },
+      },
     ],
   },
   {
     q: "How do you feel about your spending right now?",
     options: [
-      { text: "I keep it tight and would rather save than spend", scores: { lean: 3, coast: 1 } },
-      { text: "Comfortable middle of the road with room for what I love", scores: { coast: 3, barista: 1 } },
-      { text: "I want to spend freely without tracking every dollar", scores: { fat: 3 } },
-      { text: "I just want enough to cover bills without working full time", scores: { barista: 3 } },
+      {
+        text: "I keep it tight and would rather save than spend",
+        scores: { lean: 3, coast: 1 },
+      },
+      {
+        text: "Comfortable middle of the road with room for what I love",
+        scores: { coast: 3, barista: 1 },
+      },
+      {
+        text: "I want to spend freely without tracking every dollar",
+        scores: { fat: 3 },
+      },
+      {
+        text: "I just want enough to cover bills without working full time",
+        scores: { barista: 3 },
+      },
     ],
   },
   {
     q: "How do you actually want to spend your time?",
     options: [
-      { text: "Doing meaningful work on my own terms", scores: { coast: 3, barista: 2 } },
-      { text: "A mix of part time work and creative projects", scores: { barista: 3 } },
-      { text: "Travel, hobbies, and not thinking about money", scores: { fat: 3 } },
+      {
+        text: "Doing meaningful work on my own terms",
+        scores: { coast: 3, barista: 2 },
+      },
+      {
+        text: "A mix of part time work and creative projects",
+        scores: { barista: 3 },
+      },
+      {
+        text: "Travel, hobbies, and not thinking about money",
+        scores: { fat: 3 },
+      },
       { text: "Quiet and simple days at home", scores: { lean: 3 } },
     ],
   },
   {
     q: "What feels like enough money for your future self?",
     options: [
-      { text: "Enough to cover the basics, nothing fancy", scores: { lean: 3 } },
-      { text: "Enough to live comfortably and give generously", scores: { coast: 3 } },
-      { text: "Enough to cover benefits while I work part time", scores: { barista: 3 } },
+      {
+        text: "Enough to cover the basics, nothing fancy",
+        scores: { lean: 3 },
+      },
+      {
+        text: "Enough to live comfortably and give generously",
+        scores: { coast: 3 },
+      },
+      {
+        text: "Enough to cover benefits while I work part time",
+        scores: { barista: 3 },
+      },
       { text: "Enough to never worry about a price tag", scores: { fat: 3 } },
     ],
   },
@@ -123,14 +216,14 @@ const RESULTS = {
     title: "Barista FIRE",
     desc: "You want a mix of meaningful part time work and real freedom. Barista FIRE means saving enough that part time income covers your lifestyle while your investments keep growing in the background.",
     cta: "Book a Free Discovery Call",
-    href: "https://calendly.com",
+    href: "https://calendar.app.google/bA5uSgSG736weSL5A",
     external: true,
   },
 };
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < breakpoint : false
+    typeof window !== "undefined" ? window.innerWidth < breakpoint : false,
   );
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < breakpoint);
@@ -261,7 +354,7 @@ function Hero({ isMobile }) {
             fontWeight: 500,
           }}
         >
-          I help people build wealth, give generously, and make work optional.
+          Build wealth. Live fully. Coast to freedom.
         </h2>
         <p
           style={{
@@ -274,8 +367,18 @@ function Hero({ isMobile }) {
             marginRight: "auto",
           }}
         >
-          Personal finance coaching, Coast FIRE planning, and free tools to
-          take control of your money.
+          Personal finance coaching for people who want to invest wisely, spend
+          on what matters, and design a life where{" "}
+          <span
+            style={{
+              color: C.sage,
+              fontStyle: "italic",
+              fontWeight: 500,
+            }}
+          >
+            work becomes optional
+          </span>
+          .
         </p>
       </div>
     </section>
@@ -307,10 +410,10 @@ function RoutingCardsSection({ isMobile }) {
   );
 }
 
-function RoutingCard({ icon, title, desc, href, external, label }) {
+function RoutingCard({ icon, title, desc, href, external, label, background }) {
   const [hover, setHover] = useState(false);
   const sharedStyle = {
-    background: C.white,
+    background: background || C.white,
     border: `1px solid ${C.sageLight}`,
     borderRadius: 16,
     padding: 32,
@@ -319,9 +422,7 @@ function RoutingCard({ icon, title, desc, href, external, label }) {
     display: "block",
     transition: "transform 0.2s ease, box-shadow 0.2s ease",
     transform: hover ? "translateY(-4px)" : "translateY(0)",
-    boxShadow: hover
-      ? `0 12px 32px ${C.sage}25`
-      : `0 2px 8px ${C.sage}10`,
+    boxShadow: hover ? `0 12px 32px ${C.sage}25` : `0 2px 8px ${C.sage}10`,
     cursor: "pointer",
   };
 
@@ -365,7 +466,11 @@ function RoutingCard({ icon, title, desc, href, external, label }) {
     </>
   );
 
-  const onClick = () => track("hub_card_click", { card: title });
+  const onClick = () =>
+    track("cta_click", {
+      page: "hub",
+      position: `routing_card_${title.toLowerCase().replace(/\s+/g, "_")}`,
+    });
 
   if (external) {
     return (
@@ -462,12 +567,7 @@ function TimelineSection({ isMobile }) {
             }}
           />
           {MILESTONES.map((m, i) => (
-            <TimelineItem
-              key={i}
-              milestone={m}
-              index={i}
-              isMobile={isMobile}
-            />
+            <TimelineItem key={i} milestone={m} index={i} isMobile={isMobile} />
           ))}
         </div>
       </div>
@@ -788,11 +888,26 @@ function QuizResult({ result, onReset }) {
           target="_blank"
           rel="noopener noreferrer"
           style={resultBtnStyle}
+          onClick={() =>
+            track("cta_click", {
+              page: "hub",
+              position: `quiz_result_${result.title.toLowerCase().replace(/\s+/g, "_")}`,
+            })
+          }
         >
           {result.cta}
         </a>
       ) : (
-        <Link to={result.href} style={resultBtnStyle}>
+        <Link
+          to={result.href}
+          style={resultBtnStyle}
+          onClick={() =>
+            track("cta_click", {
+              page: "hub",
+              position: `quiz_result_${result.title.toLowerCase().replace(/\s+/g, "_")}`,
+            })
+          }
+        >
           {result.cta}
         </Link>
       )}
@@ -831,9 +946,9 @@ const resultBtnStyle = {
 
 function AboutSection({ isMobile }) {
   const stats = [
-    { value: "$566K", label: "Net Worth" },
-    { value: "38%", label: "Invested" },
-    { value: "17%", label: "Given" },
+    { value: "$566K", label: "Net Worth (2025)" },
+    { value: "$38K", label: "Invested in 2025" },
+    { value: "$17K", label: "Given in 2025" },
     { value: "$0", label: "Debt" },
   ];
 
@@ -846,7 +961,7 @@ function AboutSection({ isMobile }) {
     >
       <div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center" }}>
         <SectionLabel>About</SectionLabel>
-        <SectionHeading isMobile={isMobile}>Hi, I am Mariah</SectionHeading>
+        <SectionHeading isMobile={isMobile}>Hi! I'm Mariah.</SectionHeading>
         <p
           style={{
             fontSize: isMobile ? 16 : 18,
@@ -859,10 +974,10 @@ function AboutSection({ isMobile }) {
             marginRight: "auto",
           }}
         >
-          I am a personal finance coach helping people build a money system
-          they actually use. I believe wealth is a tool for generosity and
-          freedom, not a scoreboard. I share what is working for me and the
-          people I coach so you can do the same.
+          I am a personal finance coach helping people build a money system they
+          actually use. I believe wealth is a tool for generosity and freedom,
+          not a scoreboard. I share what is working for me and the people I
+          coach so you can do the same.
         </p>
         <div
           style={{
@@ -922,7 +1037,7 @@ function NewsletterSection({ isMobile }) {
     const input = document.getElementById("hub-newsletter-email");
     const email = input ? input.value : "";
     if (!email) return;
-    track("newsletter_signup", { location: "hub" });
+    track("newsletter_signup", { form: "hub" });
     fetch("https://app.kit.com/forms/9197742/subscriptions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -1078,7 +1193,16 @@ function SocialSection() {
       name: "Instagram",
       href: "https://instagram.com/mariahakinbi",
       svg: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -1087,9 +1211,18 @@ function SocialSection() {
     },
     {
       name: "YouTube",
-      href: "#",
+      href: "https://www.youtube.com/@mariahakinbi",
       svg: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
           <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
         </svg>
@@ -1212,7 +1345,8 @@ function Footer({ isMobile }) {
             lineHeight: 1.6,
           }}
         >
-          2026 Money with Mariah. Educational content only, not financial advice.
+          2026 Money with Mariah. Educational content only, not financial
+          advice.
         </p>
       </div>
     </footer>
@@ -1226,7 +1360,7 @@ function LeadMagnetModal({ onClose }) {
     const input = document.getElementById("hub-leadmagnet-email");
     const email = input ? input.value : "";
     if (!email) return;
-    track("lead_magnet_signup", { location: "hub_modal" });
+    track("newsletter_signup", { form: "popup" });
     fetch("https://app.kit.com/forms/9197742/subscriptions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
