@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import HubPage from "./pages/HubPage.jsx";
 import CoachingPage from "./pages/CoachingPage.jsx";
 import CoastFirePage from "./pages/CoastFirePage.jsx";
+import BookedPage from "./pages/BookedPage.jsx";
 
 function RouteEffects() {
   const { pathname, search } = useLocation();
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/" element={<HubPage />} />
         <Route path="/coaching" element={<CoachingPage />} />
         <Route path="/coastfire" element={<CoastFirePage />} />
+        <Route path="/booked" element={<BookedPage />} />
       </Routes>
     </>
   );

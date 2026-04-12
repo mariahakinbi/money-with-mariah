@@ -578,51 +578,28 @@ function WhatYouGet({ isMobile }) {
                 border: "1px solid rgba(255,255,255,0.25)",
                 borderRadius: 14,
                 padding: "24px 24px",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: 14,
               }}
             >
               <div
                 style={{
-                  flexShrink: 0,
-                  width: 32,
-                  height: 32,
-                  borderRadius: "50%",
-                  background: C.white,
-                  color: C.sage,
                   fontFamily: "'Playfair Display', serif",
+                  fontSize: 22,
+                  color: C.white,
                   fontWeight: 500,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 15,
+                  marginBottom: 8,
+                  lineHeight: 1.3,
                 }}
               >
-                {i + 1}
+                {item.title}
               </div>
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: 18,
-                    color: C.white,
-                    fontWeight: 500,
-                    marginBottom: 6,
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {item.title}
-                </div>
-                <div
-                  style={{
-                    fontSize: 14,
-                    lineHeight: 1.55,
-                    color: "rgba(255,255,255,0.88)",
-                  }}
-                >
-                  {item.body}
-                </div>
+              <div
+                style={{
+                  fontSize: 14,
+                  lineHeight: 1.55,
+                  color: "rgba(255,255,255,0.88)",
+                }}
+              >
+                {item.body}
               </div>
             </div>
           ))}

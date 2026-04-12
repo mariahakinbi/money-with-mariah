@@ -30,7 +30,7 @@ function track(event, params = {}) {
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < breakpoint : false
+    typeof window !== "undefined" ? window.innerWidth < breakpoint : false,
   );
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < breakpoint);
@@ -169,7 +169,10 @@ function CTAButton({ children, variant = "sage", onClick, position }) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => {
-        track("cta_click", { page: "coastfire", position: position || variant });
+        track("cta_click", {
+          page: "coastfire",
+          position: position || variant,
+        });
         if (onClick) onClick();
       }}
       style={{
@@ -298,7 +301,9 @@ function NavBar() {
           href={BOOKING_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => track("cta_click", { page: "coastfire", position: "nav" })}
+          onClick={() =>
+            track("cta_click", { page: "coastfire", position: "nav" })
+          }
           style={{
             background: C.sage,
             color: C.white,
@@ -376,8 +381,8 @@ function Hero({ isMobile }) {
           }}
         >
           Book a free 15-minute call. We will look at your numbers, estimate
-          your Coast FIRE target, and talk about your next step toward
-          financial freedom.
+          your Coast FIRE target, and talk about your next step toward financial
+          freedom.
         </p>
         <CTAButton position="hero">{MAIN_CTA_TEXT}</CTAButton>
         <CTANote>
@@ -620,51 +625,28 @@ function WhatYouGet({ isMobile }) {
                 border: "1px solid rgba(255,255,255,0.25)",
                 borderRadius: 14,
                 padding: "24px 24px",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: 14,
               }}
             >
               <div
                 style={{
-                  flexShrink: 0,
-                  width: 32,
-                  height: 32,
-                  borderRadius: "50%",
-                  background: C.white,
-                  color: C.sage,
                   fontFamily: "'Playfair Display', serif",
+                  fontSize: 22,
+                  color: C.white,
                   fontWeight: 500,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 15,
+                  marginBottom: 8,
+                  lineHeight: 1.3,
                 }}
               >
-                {i + 1}
+                {item.title}
               </div>
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: 18,
-                    color: C.white,
-                    fontWeight: 500,
-                    marginBottom: 6,
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {item.title}
-                </div>
-                <div
-                  style={{
-                    fontSize: 14,
-                    lineHeight: 1.55,
-                    color: "rgba(255,255,255,0.88)",
-                  }}
-                >
-                  {item.body}
-                </div>
+              <div
+                style={{
+                  fontSize: 14,
+                  lineHeight: 1.55,
+                  color: "rgba(255,255,255,0.88)",
+                }}
+              >
+                {item.body}
               </div>
             </div>
           ))}
@@ -746,7 +728,9 @@ function WhatYouGet({ isMobile }) {
           ))}
         </div>
         <div style={{ textAlign: "center" }}>
-          <CTAButton variant="white" position="what_you_get">{MAIN_CTA_TEXT}</CTAButton>
+          <CTAButton variant="white" position="what_you_get">
+            {MAIN_CTA_TEXT}
+          </CTAButton>
           <CTANote light>No commitment. Just clarity.</CTANote>
         </div>
       </div>
@@ -798,8 +782,8 @@ function AboutAndFAQ({ isMobile }) {
                 lineHeight: 1.25,
               }}
             >
-              I built $566K on 9-5 income. No inheritance. No crypto.
-              Just a system.
+              I built $500K+ on 9-5 income. No inheritance. No crypto. Just a
+              system.
             </h3>
             <p
               style={{
@@ -1035,8 +1019,8 @@ function FinalCTA({ isMobile }) {
           }}
         >
           Book a free 15-minute call. We will look at your numbers, estimate
-          your Coast FIRE target, and talk about your next step toward
-          financial freedom.
+          your Coast FIRE target, and talk about your next step toward financial
+          freedom.
         </p>
         <CTAButton position="final">{MAIN_CTA_TEXT}</CTAButton>
         <CTANote light>Free. 15 minutes. No obligation.</CTANote>
